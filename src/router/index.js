@@ -27,7 +27,12 @@ const routes = [
     path: '/color',
     name: 'Color',
     component: () => import(/* webpackChunkName: "color" */ '../views/Color.vue')
-  }
+  },
+  {
+    path: '/book',
+    name: 'book',
+    component: () => import(/* webpackChunkName: "book" */ '../views/Book.vue')
+  },
 ]
 
 const router = new VueRouter({

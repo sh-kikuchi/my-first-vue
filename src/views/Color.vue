@@ -16,7 +16,7 @@
       <input v-model="blue" type="range" max="255" min="0" />
       {{ blue }}
     </div>
-    <div>background: rgb({{ red }},{{ green }},{{ blue }})</div>
+    <div>background-color: rgb({{ red }},{{ green }},{{ blue }})</div>
   </div>
 </template>
 <script>
@@ -35,7 +35,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .square {
   width: 100px;
   height: 100px;

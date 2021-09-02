@@ -82,4 +82,4 @@ export default {
 .list-text {
   width: 400px;
 }
-</style>>
+</style>

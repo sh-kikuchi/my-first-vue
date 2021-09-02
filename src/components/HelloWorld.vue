@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <div class="square">
-      <div class="sub-square" v-for="content in contents" :key="content">
+      <div class="sub-square" v-for="(content, index) in contents" :key="index">
         <h3>{{ content.title }}</h3>
         <p>{{ content.text }}</p>
       </div>

@@ -5,6 +5,7 @@
       <router-link to="/work">WorkS</router-link>
       <router-link to="/list">ListS</router-link>
       <router-link to="/color">ColorS</router-link>
+      <router-link to="/book">BookS</router-link>
     </div>
     <router-view />
   </div>
