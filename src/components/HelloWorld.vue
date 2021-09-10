@@ -1,71 +1,30 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <div class="square">
-      <div class="sub-square" v-for="(content, index) in contents" :key="index">
-        <h3>{{ content.title }}</h3>
-        <p>{{ content.text }}</p>
-      </div>
-    </div>
-  </div>
+  <v-container>
+    <v-row class="text-center">
+      <v-col cols="12">
+        <v-avatar size="200">
+          <img class="my-3" src="../assets/osaka.jpg" alt="獅子" />
+        </v-avatar>
+      </v-col>
+
+      <v-col class="mb-4">
+        <h1 class="display-2 font-weight-bold mb-3">
+          Welcome to <span>My-First-Vue</span>
+        </h1>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
 export default {
   name: "HelloWorld",
-  props: {
-    msg: String,
-  },
-  data() {
-    return {
-      contents: [
-        {
-          title: "VIEWS",
-          text: "【vue-slick-carousel】を使用した写真スライド。",
-        },
-        {
-          title: "LISTS",
-          text: "『太陽のパスタ、豆のスープ』よりドリフターズリスト！",
-        },
-        {
-          title: "COLORS",
-          text: "三原色からあなただけの色を探そう",
-        },
-      ],
-    };
-  },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.square {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-}
-.sub-square {
-  width: 300px;
-  height: 300px;
-}
-.sub-square:nth-child(even) {
-  border: 1px solid #000000;
-}
-.sub-square:nth-child(odd) {
-  background-color: rgba(66, 185, 131, 0.5);
+span {
+  background-color: darkgreen;
+  color: white;
+  padding: 5px;
 }
 </style>

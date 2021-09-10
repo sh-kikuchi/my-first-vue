@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>WORKS</h1>
+    <h1 class="page-title">Works</h1>
+    <h3 class="page-sub-title">こんなプログラムを作ってます！</h3>
     <VueSlickCarousel :arrows="true" :dots="true">
       <div><img src="../assets/mysite.jpg" /></div>
       <div><img src="../assets/kanban.jpg" /></div>

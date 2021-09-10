@@ -1,15 +1,28 @@
 <template>
   <div id="list">
-    <h1>This is a Drifter's list page</h1>
-    <input type="card" v-model="card" />
-    <button @click="addCard">追加する</button>
+    <h1 class="page-title">Drifter's List</h1>
+    <h3 class="page-sub-title">やりたいことはあなたが選ぶ</h3>
+    <form class="list-form">
+      <input type="post-input" v-model="card" />
+      <button @click="addCard">追加する</button>
+    </form>
     <draggable v-model="lists" @end="onEnd">
       <div class="card" v-for="(list, index) in lists" :key="index">
-        <div class="list-index">{{ index + 1 }}</div>
-        <div class="list-text">{{ list }}</div>
-        <div>
-          <button class="btn btn-danger" @click="removeCard(index)">✖</button>
-        </div>
+        <v-row>
+          <v-col>
+            <v-card class="mx-auto" max-width="400">
+              <v-card-text class="d-flex flex-no-wrap justify-space-between">
+                <div class="list-index">{{ index + 1 }}</div>
+                <div class="list-text">{{ list }}</div>
+                <div>
+                  <button class="btn btn-danger" @click="removeCard(index)">
+                    ✖
+                  </button>
+                </div>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
       </div>
     </draggable>
   </div>
@@ -74,12 +87,10 @@ export default {
 };
 </script>
 <style scoped>
-.card {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-.list-text {
-  width: 400px;
+.list-form {
+  width: 250px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 </style>

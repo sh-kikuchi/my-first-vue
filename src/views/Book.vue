@@ -1,19 +1,49 @@
 <template>
   <div id="book">
-    <h1>Books</h1>
-    <p>
-      <input type="text" v-model="keyword" />
-    </p>
+    <h1 class="page-title">Library</h1>
+    <h3 class="page-sub-title">今、読みたい本はどんなもの？</h3>
     <div>
+      <v-text-field
+        class="search-input"
+        label="タイトルや著者で検索して下さい"
+        v-model="keyword"
+        hide-details="auto"
+        color="success"
+        loading
+      ></v-text-field>
+    </div>
+    <div class="d-flex center">
       {{ message }}
     </div>
-    <div class="book_card" v-for="(item, index) in items" :key="index">
-      <div class="card-body">
-        <p class="card-title">{{ item.volumeInfo.title }}</p>
-        <p class="card-text">{{ item.volumeInfo.authors }}</p>
-        <p class="card-text">{{ item.volumeInfo.publisher }}</p>
-      </div>
-    </div>
+    <v-container>
+      <v-row dense>
+        <v-col v-for="(item, index) in items" :key="index" cols="4">
+          <v-card height="250px">
+            <div class="d-flex flex-no-wrap justify-space-between">
+              <div>
+                <a v-bind:href="item.volumeInfo.previewLink" target="_blank">
+                  <img
+                    class="card-image"
+                    v-bind:src="item.volumeInfo.imageLinks.thumbnail"
+                  />
+                </a>
+              </div>
+              <div>
+                <v-card-title class="card-title">{{
+                  item.volumeInfo.title
+                }}</v-card-title>
+                <v-card-text card-text>{{
+                  item.volumeInfo.authors
+                }}</v-card-text>
+                <v-card-text card-text>{{
+                  item.volumeInfo.publisher
+                }}</v-card-text>
+              </div>
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <script>
@@ -68,4 +98,14 @@ export default {
 </script>
 
 <style scoped>
+.search-input {
+  width: 300px;
+  margin: 0 auto;
+}
+.card-title {
+  font-size: 14px;
+}
+.card-text {
+  font-size: 12px;
+}
 </style>
