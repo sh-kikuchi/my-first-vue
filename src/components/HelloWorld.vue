@@ -26,12 +26,14 @@
         </VueSlickCarousel>
       </v-col>
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mt-3 mb-3 pt-3">
-          Welcome to
-          <span class="mt-3"
-            >My-First-<font-awesome-icon :icon="['fab', 'vuejs']" />ue</span
-          >
-        </h1>
+        <div class="d-flex justify-center">
+          <h1 class="hidden-md-and-down">Welcome to</h1>
+          <h1>
+            <span
+              >My-First-<font-awesome-icon :icon="['fab', 'vuejs']" />ue</span
+            >
+          </h1>
+        </div>
         <h2>The Grand Experiment(-)</h2>
       </v-col>
     </v-row>
