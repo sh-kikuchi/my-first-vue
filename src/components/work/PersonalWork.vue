@@ -1,7 +1,7 @@
 <template>
   <v-card flat>
     <v-card-text>
-      <p>きくち/kikuchi<font-awesome-icon icon="coffee" /></p>
+      <p>きくち/kikuchi</p>
       <ul>
         <li>1994年7月26日、獅子座</li>
         <li>趣味：外出ること、ライブ参戦、たまにインラインスケート</li>

@@ -6,7 +6,7 @@
           ><!-- v-for="n in 2" :key="n" -->
           <span slot="opposite">Tus eu perfecto</span>
           <v-card class="elevation-2">
-            <v-card-title class="text-h5">
+            <v-card-title class="subtitle-1">
               タスク管理システム開発
             </v-card-title>
             <v-card-text>
@@ -18,7 +18,7 @@
         </v-timeline-item>
         <v-timeline-item>
           <v-card class="elevation-2">
-            <v-card-title class="text-h5">
+            <v-card-title class="subtitle-1">
               飲食店向けシステム開発
             </v-card-title>
             <v-card-text>
