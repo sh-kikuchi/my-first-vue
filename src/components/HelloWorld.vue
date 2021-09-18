@@ -27,10 +27,12 @@
       </v-col>
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mt-3 mb-3 pt-3">
-          <span class="hidden-md-and-down">Welcome to</span>
-          <span>My-First-<font-awesome-icon :icon="['fab', 'vuejs']" />ue</span>
+          Welcome to
+          <span class="mt-3"
+            >My-First-<font-awesome-icon :icon="['fab', 'vuejs']" />ue</span
+          >
         </h1>
-        <h2>- The Grand Experiment(-) -</h2>
+        <h2>The Grand Experiment(-)</h2>
       </v-col>
     </v-row>
   </v-container>
