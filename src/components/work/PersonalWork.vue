@@ -30,6 +30,16 @@
         </span>
         <span><font-awesome-icon :icon="['fab', 'markdown']" />Markdown </span>
       </div>
+      <div>
+        <v-btn color="Black d-block mt-5 mx-auto" dark>
+          <a href="https://github.com/sh-kikuchi" class="btn-github"
+            ><font-awesome-icon
+              :icon="['fab', 'github']"
+              class="mr-2"
+            />GitHub</a
+          >
+        </v-btn>
+      </div>
       <br />
 
       <h3 class="text-center text-h6">Works</h3>
@@ -52,9 +62,6 @@
           自分にフィットする本や音楽、そして旅行という逃避行（笑）など、プライベート感が爆発しているサイト。それに加えて、学生時代に研究していた日本近現代史をまとめたページもあり、研究成果を発表しています。因みにサイト名に使われている「Into
           the Wild」はGLAYER故。
         </v-card-text>
-        <v-card-actions>
-          <v-btn outlined rounded text><a href=""> 準備中 </a></v-btn>
-        </v-card-actions>
       </v-card>
       <v-card class="mx-auto" max-width="344" outlined>
         <v-list-item three-line>
@@ -67,11 +74,12 @@
           </v-list-item-content>
         </v-list-item>
         <v-card-text>
-          アプリで「お道具箱」をつくるコンセプトで始めた自主企画ものが「toolbox」です。第1弾がトレロ風かんばんアプリです。個人向けのタスク管理で、wiki機能も搭載。並べ替えは出来るようにしましたが、本家のようにドラッグアンドドロップは出来ませんので悪しからず。緑を基調としたデザイン。
+          アプリで「お道具箱」をつくるコンセプトで始めた自主企画ものが「toolbox」です。第1弾がトレロ風かんばんアプリです。個人向けのタスク管理で、wiki機能も搭載。並べ替えは出来るようにしましたが、本家のようにドラッグアンドドロップは出来ませんので悪しからず。緑を基調としたデザイン。(email:test@test.com
+          password:testtest ※パスワード変更はしないで下さい)
         </v-card-text>
         <v-card-actions>
           <v-btn outlined rounded text
-            ><a href="http://sk-kanban.herokuapp.com/"> 覗いてみる </a></v-btn
+            ><a href="http://sk-kanban.herokuapp.com/"> アプリへ移動 </a></v-btn
           >
         </v-card-actions>
       </v-card>
@@ -108,12 +116,12 @@
           </v-list-item-content>
         </v-list-item>
         <v-card-text>
-          「toolbox」第3弾はブックメモアプリ。自分で決めたテーマ毎に本の要約や引用をまとめられるもの。「自分が学生時代にレポートやレジュメを作成する中であったら便利だったな」という思いでつくってみました。複数の本から情報をまとめたい時には是非。
+          「toolbox」第3弾はブックメモアプリ。自分で決めたテーマ毎に本の要約や引用をまとめられるもの。「自分が学生時代にレポートやレジュメを作成する中であったら便利だったな」という思いでつくってみました。複数の本から情報をまとめたい時には是非。赤を貴重としたデザイン
         </v-card-text>
         <v-card-actions>
           <v-btn outlined rounded text
             ><a href="http://sk-bookstock.herokuapp.com/">
-              覗いてみる
+              アプリへ移動
             </a></v-btn
           >
         </v-card-actions>
@@ -127,7 +135,16 @@ export default {
 };
 </script>
 <style scoped>
+a {
+  text-decoration: none;
+}
+
 .pg-lang {
   font-size: 16px;
+}
+
+.btn-github {
+  text-decoration: none;
+  color: white;
 }
 </style>
