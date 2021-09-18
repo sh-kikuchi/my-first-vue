@@ -21,8 +21,8 @@
         <input v-model="opacity" type="range" max="1" min="0" step="0.1" />
       </div>
       <div>
-        color: rgb({{ red }},{{ green }},{{ blue }},{{ opacity }})<br />
-        background-color: rgb({{ red }},{{ green }},{{ blue }},{{ opacity }})
+        color: rgba({{ red }},{{ green }},{{ blue }},{{ opacity }})<br />
+        background-color: rgba({{ red }},{{ green }},{{ blue }},{{ opacity }})
       </div>
     </div>
   </div>
