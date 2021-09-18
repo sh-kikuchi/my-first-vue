@@ -1,30 +1,44 @@
 <template>
-  <div>
-    <h1 class="page-title">Works</h1>
-    <h3 class="page-sub-title">こんなプログラムを作ってます！</h3>
-    <VueSlickCarousel :arrows="true" :dots="true">
-      <div><img src="../assets/mysite.jpg" /></div>
-      <div><img src="../assets/kanban.jpg" /></div>
-      <div><img src="../assets/smalltalk.jpg" /></div>
-      <div><img src="../assets/bookstock.png" /></div>
-    </VueSlickCarousel>
-  </div>
+  <v-card>
+    <h1 class="page-title">My Works</h1>
+    <h3 class="page-sub-title">( ﾟ ρ ﾟ )ﾎﾞｰ</h3>
+    <v-tabs pararell>
+      <v-tab>
+        <v-icon left> mdi-account </v-icon>
+        自己紹介・制作
+      </v-tab>
+      <v-tab>
+        <v-icon left> mdi-briefcase </v-icon>
+        おしごと
+      </v-tab>
+      <v-tab>
+        <v-icon left> mdi-account-multiple </v-icon>
+        ユニット活動
+      </v-tab>
+      <v-tab-item>
+        <PersonalWork></PersonalWork>
+      </v-tab-item>
+      <v-tab-item>
+        <MainJob></MainJob>
+      </v-tab-item>
+      <v-tab-item>
+        <TeamWork></TeamWork>
+      </v-tab-item>
+    </v-tabs>
+  </v-card>
 </template>
-
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-// optional style for arrows & dots
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import PersonalWork from "../components/work/PersonalWork";
+import MainJob from "../components/work/MainJob";
+import TeamWork from "../components/work/TeamWork";
 
 export default {
-  components: { VueSlickCarousel },
+  name: "Work",
+
+  components: {
+    PersonalWork,
+    MainJob,
+    TeamWork,
+  },
 };
 </script>
-<style scoped>
-img {
-  width: 50%;
-  height: 50%;
-  margin: 0 auto;
-}
-</style>

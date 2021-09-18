@@ -12,34 +12,40 @@
         loading
       ></v-text-field>
     </div>
-    <div class="d-flex center">
+    <v-layout justify-center>
       {{ message }}
-    </div>
+    </v-layout>
     <v-container>
       <v-row dense>
-        <v-col v-for="(item, index) in items" :key="index" cols="4">
-          <v-card height="250px">
-            <div class="d-flex flex-no-wrap justify-space-between">
-              <div>
-                <a v-bind:href="item.volumeInfo.previewLink" target="_blank">
-                  <img
-                    class="card-image"
-                    v-bind:src="item.volumeInfo.imageLinks.thumbnail"
-                  />
-                </a>
-              </div>
-              <div>
+        <v-col v-for="(item, index) in items" :key="index" cols sm="12" md="6">
+          <v-card class="book-card mt-3" style="height: 100%">
+            <v-row>
+              <v-col cols sm="12" md="6">
+                <v-layout justify-center>
+                  <a v-bind:href="item.volumeInfo.previewLink" target="_blank">
+                    <img
+                      class="card-image"
+                      d-block
+                      d-flex="center"
+                      v-bind:src="item.volumeInfo.imageLinks.thumbnail"
+                    />
+                  </a>
+                </v-layout>
+              </v-col>
+              <v-col cols sm="12" md="6">
                 <v-card-title class="card-title">{{
                   item.volumeInfo.title
                 }}</v-card-title>
-                <v-card-text card-text>{{
-                  item.volumeInfo.authors
-                }}</v-card-text>
+                <v-card-text card-text>
+                  <span v-for="author in item.volumeInfo.authors" :key="author">
+                    {{ author }}
+                  </span>
+                </v-card-text>
                 <v-card-text card-text>{{
                   item.volumeInfo.publisher
                 }}</v-card-text>
-              </div>
-            </div>
+              </v-col>
+            </v-row>
           </v-card>
         </v-col>
       </v-row>
@@ -77,7 +83,7 @@ export default {
       }
       this.message = "Searching";
       var vm = this;
-      var params = { page: 1, per_page: 10, query: this.keyword };
+      var params = { page: 1, per_page: 30, query: this.keyword };
       console.log(params);
       axios
         .get(

@@ -1,77 +1,47 @@
 <template>
-  <div id="app">
-    <v-app>
-      <v-app-bar color="dark" dark app>
-        <v-toolbar-title>My First Vue.</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items>
-          <v-btn text color="white"
-            ><router-link style="text-decoration: none; color: white" to="/"
-              >@HOME</router-link
-            ></v-btn
-          >
-          <v-btn text
-            ><router-link style="text-decoration: none; color: white" to="/list"
-              >ListS</router-link
-            ></v-btn
-          >
-          <v-btn text
-            ><router-link
-              style="text-decoration: none; color: white"
-              to="/color"
-              >ColorS</router-link
-            ></v-btn
-          >
-          <v-btn text
-            ><router-link style="text-decoration: none; color: white" to="/book"
-              >BookS</router-link
-            ></v-btn
-          >
-          <v-menu offset-y>
-            <template v-slot:activator="{ on }">
-              <v-btn v-on="on" text
-                ><router-link
-                  style="text-decoration: none; color: white"
-                  to="/work"
-                  >WorkS</router-link
-                ></v-btn
-              >
-            </template>
-            <!-- <v-list>
-              <v-list-item>
-                <v-list-item-content>
-                  <v-list-item-title
-                    ><v-btn text>Private Works</v-btn></v-list-item-title
-                  >
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item>
-                <v-list-item-content>
-                  <v-list-item-title
-                    ><v-btn text>Business</v-btn></v-list-item-title
-                  >
-                </v-list-item-content>
-              </v-list-item>
-            </v-list> -->
-          </v-menu>
-        </v-toolbar-items>
-      </v-app-bar>
-      <v-main>
-        <router-view />
-      </v-main>
-      <v-footer class="footer" dark app>
-        <div class="footer">Sometimes the best gain is to lose</div></v-footer
-      >
-    </v-app>
-  </div>
-</template>
+<div>
+  <v-app class="overflow-hidden">
+    <v-app-bar dark app>
+        <v-toolbar-title class="hidden-md-and-down">My First Vue.</v-toolbar-title>
+        <v-tabs align-with-title>
+          <v-tab>
+            <router-link style="text-decoration: none; color: white" to="/">@HOME</router-link>
+          </v-tab>
+          <v-tab>
+            <router-link style="text-decoration: none; color: white" to="/work">WorkS</router-link>
+          </v-tab>
+          <v-tab>
+            <router-link style="text-decoration: none; color: white" to="/list">ListS</router-link>
+          </v-tab>
+          <v-tab>
+            <router-link style="text-decoration: none; color: white" to="/color">ColorS</router-link>
+          </v-tab>
+          <v-tab>
+           <router-link style="text-decoration: none; color: white" to="/book">BookS</router-link>
+          </v-tab>
+        </v-tabs>
+    </v-app-bar>
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
+  <v-footer class="footer" dark app>
+    <div class="footer">Sometimes the best gain is to lose</div>
+  </v-footer>
+</div>
 
+</template>
 <script>
-export default {
-  name: "App",
-};
+  export default {
+    name: "App",
+
+  }
 </script>
 <style>
+.v-toolbar__title {
+  overflow: visible !important;
+  margin-right: 50px !important;
+}
 .page-title,
 .page-sub-title {
   text-align: center;
