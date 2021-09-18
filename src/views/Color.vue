@@ -1,7 +1,7 @@
 <template>
   <div id="color">
     <h1 class="page-title">Find your color</h1>
-    <h3 class="page-sub-title">あなただけのお気に入りの色を探してみましょう</h3>
+    <h3 class="page-sub-title">あなただけのお気に入りの色を</h3>
     <div :style="bindStyle" class="circle"></div>
     <div class="contents color-content">
       <div>
